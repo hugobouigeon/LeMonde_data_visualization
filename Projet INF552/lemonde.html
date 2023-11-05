@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>INF552 - Projet Le Monde</title>
+        <!-- https://d3js.org/ -->
+        <script type="text/javascript" src="js/d3.v7.min.js"></script>
+        <script type="text/javascript" src="js/lemonde.js"></script>
+        <style>
+svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+.boxplot {
+    stroke-width:1.2px;
+    stroke:#666;
+    fill:none;
+}
+        </style>
+    </head>
+
+    <body onload="createViz();">
+        <div>
+            <form>
+                <center>
+                <span class="formLb" style="padding-left:0em;"> Input: </span>
+                <input type="text" name="sampleField" value="Monde" id="sampleTf"
+                       onkeydown="handleKeyEvent(event);"/>
+                <span class="formLb" style="padding-left:2em;">Time span: </span>
+                <input type="date" name="startDateField" value="2022-01-01" id="startdate"
+                       onkeydown="handleKeyEvent(event);"/>
+                       <span class="formLb" style="padding-left:0em;">to</span>
+                <input type="date" name="endDateField" value="2022-12-14" id="enddate"
+                       onkeydown="handleKeyEvent(event);"/>
+                       <input type="button" value="Search" onclick="setSample();" id="sampleBt"/>
+                </center>
+            <form>
+        <div>
+        <div id="main"></div>
+    </body>
+
+</html>
